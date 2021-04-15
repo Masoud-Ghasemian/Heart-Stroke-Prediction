@@ -6,8 +6,8 @@ import numpy as np
 
 
 # loading the trained model
-model_path = "https://github.com/Masoud-Ghasemian/Heart-Stroke-Prediction/model.pkl"
-scaler_path = "https://github.com/Masoud-Ghasemian/Heart-Stroke-Prediction/scaler.pkl"
+model_path = "./model.pkl"
+scaler_path = "./scaler.pkl"
 model = pickle.load(open(model_path, 'rb'))
 scaler = pickle.load(open(scaler_path, 'rb'))
 
