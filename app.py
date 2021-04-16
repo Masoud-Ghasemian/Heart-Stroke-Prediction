@@ -146,7 +146,7 @@ def main():
     #avg_glucose_level = st.number_input("Average Glucose Level")
     avg_glucose_level = st.slider('Average Glucose Level',50, 250, 100 )
     #bmi = st.number_input("BMI")
-    bmi = st.slider('BMI', 0, 100, 30)
+    bmi = st.slider('BMI', 20, 50, 30)
     gender = st.selectbox('Gender',("...","Male","Female","Other"))
     married = st.selectbox('Ever Married?',("...","Yes","No"))
     Residence_type = st.selectbox('Residence Type',("...","Urban","Rural")) 
@@ -164,7 +164,8 @@ def main():
         This prediction is based on a **Random Forest Classifier** model. This model includes **150** trees
         and uses **entropy criterion** to measure the split. A **GridSearch CV** used to fine tune the hyperparameters. 
         Also, **Synthetic Minority Oversampling Technique (SMOTE)** approach was \n used to address the imbalanced datasets.
-        The prediction results iterestigly show that the chance to have a heart stroke strongly is correlated to **work type**! 
+        The prediction results iterestigly show that the chance to have a heart stroke strongly is correlated to **work type**!
+        To learn more about this model, Please check this [repo] (https://github.com/Masoud-Ghasemian/Heart-Stroke-Prediction)
         """
 
      
