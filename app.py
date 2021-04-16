@@ -117,7 +117,7 @@ def prediction(age, hypertension, heart_disease, avg_glucose_level, bmi, gender,
 
  
     # Making predictions 
-  prediction = model.predict_prob(df)
+  prediction = model.predict_proba(df)
      
   if prediction == 0:
     pred = "No Heart attack"
