@@ -128,7 +128,7 @@ def prediction(age, hypertension, heart_disease, avg_glucose_level, bmi, gender,
 # this is the main function in which we define our webpage  
 def main():       
     # front end elements of the web page 
-   st.image(image) 
+   
    html_temp = """ 
     <div style ="background-color:grey;padding:13px"> 
     <h1 style ="color:black;text-align:center;">Heart Stroke Prediction ML App</h1> 
@@ -137,7 +137,7 @@ def main():
       
     # display the front end aspect
     st.markdown(html_temp, unsafe_allow_html = True) 
-      
+    st.image(image)  
     # following lines create boxes in which user can enter data required to make prediction 
     #age = st.number_input("Age")
     age = st.slider('Age', 0, 80, 30)
