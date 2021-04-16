@@ -12,7 +12,7 @@ model_path = "./model.pkl"
 scaler_path = "./scaler.pkl"
 model = pickle.load(open(model_path, 'rb'))
 scaler = pickle.load(open(scaler_path, 'rb'))
-image = Image.open('./Heart.jpg')
+image = Image.open('./heart.jpg')
 
 def gender_transformer(df, gender):
   if gender == 'Male':
