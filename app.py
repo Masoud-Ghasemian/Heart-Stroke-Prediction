@@ -163,6 +163,9 @@ def main():
         and uses entropy criterion to measure the split. \n A GridSearch CV used to fine tune the hyperparameters. \n \
         Also, Synthetic Minority Oversampling Technique (SMOTE) approach was \n used to address the imbalanced \
         datasets.' )
+        """
+        this is a test
+        """
 
      
 if __name__=='__main__': 
