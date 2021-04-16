@@ -156,7 +156,7 @@ def main():
     if st.button("Predict"): 
         result = prediction(age, hypertension, heart_disease, avg_glucose_level, bmi, gender, married, Residence_type, work_type, smoking_status)
         st.success('There is {} % possibility for heart attack!'.format(result))
-        print("This results are based on a Random Forest Classifier!")
+        st.text('This is some text.')
         
      
 if __name__=='__main__': 
