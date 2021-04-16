@@ -3,7 +3,7 @@ import pickle
 import streamlit as st
 import pandas as pd
 import numpy as np
-from xgboost import XGBClassifier
+
 
 
 # loading the trained model
@@ -117,13 +117,13 @@ def prediction(age, hypertension, heart_disease, avg_glucose_level, bmi, gender,
 
  
     # Making predictions 
-  prediction = model.predict(df)
+  prediction = model.predict_prob(df)
      
   if prediction == 0:
     pred = "No Heart attack"
   else:
     pred = "Heart Attack"
-  return pred
+  return prediction[1]*100
          
   
 # this is the main function in which we define our webpage  
