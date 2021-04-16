@@ -162,8 +162,9 @@ def main():
 
         """
         This prediction is based on a Random Forest Classifier model. This model includes 150 trees
-        and uses entropy criterion to measure the split. \n A GridSearch CV used to fine tune the hyperparameters. 
+        and uses entropy criterion to measure the split. A GridSearch CV used to fine tune the hyperparameters. 
         Also, Synthetic Minority Oversampling Technique (SMOTE) approach was \n used to address the imbalanced datasets.
+        The prediction results iterestigly show that the chance to have a heart stroke strongly is correlated to work type! 
         """
 
      
