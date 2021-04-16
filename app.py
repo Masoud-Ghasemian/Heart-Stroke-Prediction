@@ -159,9 +159,9 @@ def main():
     if st.button("Predict"): 
         result = prediction(age, hypertension, heart_disease, avg_glucose_level, bmi, gender, married, Residence_type, work_type, smoking_status)
         st.success('There is {} % possibility for heart attack!'.format(result))
-        st.text('This prediction is based on a Random Forest Classifier model. This model includes 150 trees \n \
-        and uses entropy criterion to measure the split. A GridSearch CV used to fine tune the hyperparameters. \n \
-        Also, Synthetic Minority Oversampling Technique (SMOTE) approach was used to address the imbalanced \
+        st.text('This prediction is based on a Random Forest Classifier model. \n This model includes 150 trees \
+        and uses entropy criterion to measure the split. \n A GridSearch CV used to fine tune the hyperparameters. \n \
+        Also, Synthetic Minority Oversampling Technique (SMOTE) approach was \n used to address the imbalanced \
         datasets.' )
 
      
