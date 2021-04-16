@@ -129,6 +129,7 @@ def prediction(age, hypertension, heart_disease, avg_glucose_level, bmi, gender,
 def main():       
     # front end elements of the web page 
     html_temp = """ 
+    st.image(image)
     <div style ="background-color:grey;padding:13px"> 
     <h1 style ="color:black;text-align:center;">Heart Stroke Prediction ML App</h1> 
     </div> 
@@ -159,7 +160,7 @@ def main():
         result = prediction(age, hypertension, heart_disease, avg_glucose_level, bmi, gender, married, Residence_type, work_type, smoking_status)
         st.success('There is {} % possibility for heart attack!'.format(result))
         st.text('This is some text.')
-        st.image(image, caption='Heart Strok')
+        
      
 if __name__=='__main__': 
     main()
