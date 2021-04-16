@@ -163,6 +163,7 @@ def main():
         and uses entropy criterion to measure the split. A GridSearch CV used to fine tune the hyperparameters.\
         Also, Synthetic Minority Oversampling Technique (SMOTE) approach was used to address the imbalanced \
         datasets.' )
+        print('This prediction is based on a Random Forest Classifier model. This model includes 150 trees and uses entropy criterion to measure the split. A GridSearch CV used to fine tune the hyperparameters. Also, Synthetic Minority Oversampling Technique (SMOTE) approach was used to address the imbalanced datasets.')
         
      
 if __name__=='__main__': 
