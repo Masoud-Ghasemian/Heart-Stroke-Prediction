@@ -120,7 +120,7 @@ def prediction(age, hypertension, heart_disease, avg_glucose_level, bmi, gender,
   prediction = model.predict_proba(df)
   prob_pred = prediction[0][1]*100
     
-  return prob_pred
+  return int(prob_pred)
          
   
 # this is the main function in which we define our webpage  
@@ -155,7 +155,7 @@ def main():
     # when 'Predict' is clicked, make the prediction and store it 
     if st.button("Predict"): 
         result = prediction(age, hypertension, heart_disease, avg_glucose_level, bmi, gender, married, Residence_type, work_type, smoking_status)
-        st.success('There is {} possibility for heart attack!'.format(result))
+        st.success('There is {} % possibility for heart attack!'.format(result))
         print("This results are based on a Random Forest Classifier!")
         
      
