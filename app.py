@@ -3,6 +3,7 @@ import pickle
 import streamlit as st
 import pandas as pd
 import numpy as np
+from PIL import Image
 
 
 
@@ -11,6 +12,7 @@ model_path = "./model.pkl"
 scaler_path = "./scaler.pkl"
 model = pickle.load(open(model_path, 'rb'))
 scaler = pickle.load(open(scaler_path, 'rb'))
+image = Image.open('./Heart.jpg')
 
 def gender_transformer(df, gender):
   if gender == 'Male':
@@ -157,7 +159,7 @@ def main():
         result = prediction(age, hypertension, heart_disease, avg_glucose_level, bmi, gender, married, Residence_type, work_type, smoking_status)
         st.success('There is {} % possibility for heart attack!'.format(result))
         st.text('This is some text.')
-        
+        st.image(image, caption='Heart Strok')
      
 if __name__=='__main__': 
     main()
