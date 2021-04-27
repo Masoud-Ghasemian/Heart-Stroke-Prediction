@@ -140,22 +140,20 @@ def main():
     """
     This web application uses A **Random Forest Classifier** with 150 trees and entropy criterion to predict how likely is
     a patient will have a heart stroke. A **GridSearch CV** used to fine tune the hyperparameters. I used [this kaggle dataset](https://www.kaggle.com/fedesoriano/stroke-prediction-dataset) to train the model. **Synthetic Minority Oversampling Technique (SMOTE)**
-    approach was used to address the imbalanced datasets. Please check out this [repo](https://github.com/Masoud-Ghasemian/Heart-Stroke-Prediction)
+    approach was used to address the imbalanced datasets. Please check out this [repo](https://github.com/Masoud-Ghasemian/Heart-Stroke-Prediction) for the source code.
     """
     # following lines create boxes in which user can enter data required to make prediction 
     #age = st.number_input("Age")
-    age = st.slider('Age', 0, 80, 30)
-    hypertension = st.selectbox('Hypertension',("...", "Yes","No"))
-    heart_disease = st.selectbox('Heart Disease',("...","Yes","No"))
-    #avg_glucose_level = st.number_input("Average Glucose Level")
-    avg_glucose_level = st.slider('Average Glucose Level',50, 250, 100 )
-    #bmi = st.number_input("BMI")
-    bmi = st.slider('BMI', 20, 50, 30)
-    gender = st.selectbox('Gender',("...","Male","Female","Other"))
-    married = st.selectbox('Ever Married?',("...","Yes","No"))
-    Residence_type = st.selectbox('Residence Type',("...","Urban","Rural")) 
-    work_type = st.selectbox('Work Type',("...","Never_worked","Private","Self-employed", "children", 'Goverment'))
-    smoking_status = st.selectbox('Smoking Status',("...","Smokes","never smoked", "formerly smoked"))
+    age = st.slider('How old are you?', 0, 80, 30)
+    hypertension = st.selectbox('Do you have hypertension(high blood pressure)?',("...", "Yes","No"))
+    heart_disease = st.selectbox('Do you have any heart disease',("...","Yes","No"))
+    avg_glucose_level = st.slider('What is your Average Glucose Level?',50, 250, 100 )
+    bmi = st.slider('What is your BMI?', 20, 50, 30)
+    gender = st.selectbox('What is your Gender?',("...","Male","Female","Other"))
+    married = st.selectbox('Have you ever married?',("...","Yes","No"))
+    Residence_type = st.selectbox('What is your Residence Type?',("...","Urban","Rural")) 
+    work_type = st.selectbox('What is your Work Type?',("...","Never_worked","Private","Self-employed", "children", 'Goverment'))
+    smoking_status = st.selectbox('Do you smoke?',("...","Smokes","never smoked", "formerly smoked"))
 
     result =""
 
@@ -163,6 +161,8 @@ def main():
     if st.button("Predict"): 
         result = prediction(age, hypertension, heart_disease, avg_glucose_level, bmi, gender, married, Residence_type, work_type, smoking_status)
         st.success('There is {} % possibility for heart attack!'.format(result))
+       """ Disclaimer: This is an app for fun! Don't trust the results:) """
+       
 
 
 
