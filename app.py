@@ -139,7 +139,7 @@ def main():
     st.image(image)
     """
     This web application uses A **Random Forest Classifier** with 150 trees and entropy criterion to predict how likely is
-    a patient will have a heart stroke. A **GridSearch CV** used to fine tune the hyperparameters. I used [this kaggle dataset](https://www.kaggle.com/fedesoriano/stroke-prediction-dataset) to train the model. **Synthetic Minority Oversampling Technique (SMOTE)**
+    a patient will have a heart stroke. A **GridSearch CV** was used to fine tune the hyperparameters. I used [this kaggle dataset](https://www.kaggle.com/fedesoriano/stroke-prediction-dataset) to train the model. **Synthetic Minority Oversampling Technique (SMOTE)**
     approach was used to address the imbalanced datasets. Please check out this [repo](https://github.com/Masoud-Ghasemian/Heart-Stroke-Prediction) for the source code.
     """
     # following lines create boxes in which user can enter data required to make prediction 
