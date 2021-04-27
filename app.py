@@ -137,7 +137,11 @@ def main():
     # display the front end aspect
     st.markdown(html_temp, unsafe_allow_html = True)
     st.image(image)
-    
+    """
+    This web application uses A **Random Forest Classifier** with 150 trees and entropy criterion to predict how likely is
+    a patient will have a heart stroke. A **GridSearch CV** used to fine tune the hyperparameters. I used [this kaggle dataset](https://www.kaggle.com/fedesoriano/stroke-prediction-dataset) to train the model. **Synthetic Minority Oversampling Technique (SMOTE)**
+    approach was used to address the imbalanced datasets. Please check out this [repo](https://github.com/Masoud-Ghasemian/Heart-Stroke-Prediction)
+    """
     # following lines create boxes in which user can enter data required to make prediction 
     #age = st.number_input("Age")
     age = st.slider('Age', 0, 80, 30)
@@ -160,13 +164,7 @@ def main():
         result = prediction(age, hypertension, heart_disease, avg_glucose_level, bmi, gender, married, Residence_type, work_type, smoking_status)
         st.success('There is {} % possibility for heart attack!'.format(result))
 
-        """
-        This prediction is based on a **Random Forest Classifier** model. This model includes **150** trees
-        and uses **entropy criterion** to measure the split. A **GridSearch CV** used to fine tune the hyperparameters. 
-        Also, **Synthetic Minority Oversampling Technique (SMOTE)** approach was \n used to address the imbalanced datasets.
-        The prediction results iterestigly show that the chance to have a heart stroke strongly is correlated to **work type**!
-        To learn more about this model, Please check this [repository] (https://github.com/Masoud-Ghasemian/Heart-Stroke-Prediction)
-        """
+
 
      
 if __name__=='__main__': 
