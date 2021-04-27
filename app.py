@@ -161,7 +161,7 @@ def main():
     if st.button("Predict"): 
         result = prediction(age, hypertension, heart_disease, avg_glucose_level, bmi, gender, married, Residence_type, work_type, smoking_status)
         st.success('There is {} % possibility for heart attack!'.format(result))
-        """ Disclaimer: This is an app for fun! Don't trust the results:) """
+        """ Disclaimer: This is just for fun! Don't trust the results:) """
        
 
 
