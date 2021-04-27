@@ -145,8 +145,8 @@ def main():
     # following lines create boxes in which user can enter data required to make prediction 
     #age = st.number_input("Age")
     age = st.slider('How old are you?', 0, 80, 30)
-    hypertension = st.selectbox('Do you have hypertension(high blood pressure)?',("...", "Yes","No"))
-    heart_disease = st.selectbox('Do you have any heart disease',("...","Yes","No"))
+    hypertension = st.selectbox('Do you have hypertension (high blood pressure)?',("...", "Yes","No"))
+    heart_disease = st.selectbox('Do you have any heart disease?',("...","Yes","No"))
     avg_glucose_level = st.slider('What is your Average Glucose Level?',50, 250, 100 )
     bmi = st.slider('What is your BMI?', 20, 50, 30)
     gender = st.selectbox('What is your Gender?',("...","Male","Female","Other"))
